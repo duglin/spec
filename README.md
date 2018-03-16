@@ -34,6 +34,31 @@ built by WG members
 - How events are transported from producer to consumer via at least one protocol
 - Identify and resolve whatever else is needed for interoperability
 
+### Event Metadata Attributes
+
+In order to achieve the stated goals, the working group will attempt to
+constrain the number of metadata attributes they define for Events. To that
+end, attributes defined by this working group will fall into three categories:
+- required
+- optional
+- extensions
+
+As the category names imply, "required" attributes will be the ones that
+the working group considers vitial to all Events in all use cases, while
+"optional" ones will be used in a majority of the cases. When the working
+group determines that an attribute is not common enough to fall into those
+two categories but would still benefit from the level of interoperability
+that comes from being well-defined, then they will be placed into the
+"extensions" category and put into the (extensions)[extensions.md] document.
+The working group will define how these extension attributes will appear
+within a CloudEvent.
+
+In determining which category a proposed attribute belongs, or even if it
+will be included at all, the working group will use use-cases and
+user-stories to explain the rationale and need for them. This supporting
+information will be saved in the (user stories)[...] and (use cases)[...]
+documents.
+
 ## Communications
 
 We have google group for e-mail communications:
