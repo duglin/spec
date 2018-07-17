@@ -224,14 +224,18 @@ Incompatible changes to the schema SHOULD be reflected by a different URL.
     [RFC 2046](https://tools.ietf.org/html/rfc2046)
 * For Media Type examples see [IANA Media Types](http://www.iana.org/assignments/media-types/media-types.xhtml)
 
-### extensions
+### properties
 * Type: `Map`
 * Description: This is for additional metadata and this does not have a
   mandated structure. This enables a place for custom fields a producer or
-  middleware might want to include and provides a place to test metadata before
-  adding them to the CloudEvents specification.
-  See the [Extensions](extensions.md) document for a list of possible
-  attributes.
+  middleware might want to include.
+  When defining a new extension care SHOULD be taken to use a name that is
+  descriptive enough to reduce the chances of it overlapping with other
+  extensions.
+  The [Extensions](extensions.md) document contains some possible attributes
+  that could be used, but producers are free to define their own.
+  See the [example](#example) for a JSON serialization that includes
+  an additional attribute.
 * Constraints:
   * OPTIONAL
   * If present, MUST contain at least one entry
@@ -263,7 +267,7 @@ The following example shows a CloudEvent serialized as JSON:
     "source" : "/mycontext",
     "eventID" : "A234-1234-1234",
     "eventTime" : "2018-04-05T17:31:00Z",
-    "extensions" : {
+    "properties" : {
         "comExampleExtension" : "value"
     },
     "contentType" : "text/xml",
