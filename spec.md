@@ -147,14 +147,21 @@ CloudEvent, such as identifying or correlating event sources. See
 for additional information concerning the use and definition of
 extensions.
 
-This specification places no restriction on the type or semantics of the
-extension attributes. Each definition of an extensions SHOULD fully
-define all aspects of the attribute - e.g. its name, semantic meaning
+This specification places no restriction on the type or semantics of
+extension attributes. For example, they can be relatively simple data
+types (such as name/value pairs), or could be more complex data types such as
+maps or structured data.  The definition of an extension SHOULD fully
+define all aspects of its usage - e.g. its name, semantic meaning
 and possible values or even to indicate that it places no restrictions on
-its values.  New extension definitions SHOULD use a name that is
+its values. And in the case of extensions that define nested attributes,
+the definition SHOULD also indicate whether or not there is an extensibility
+point that would allow for additional producer defined attributes to be
+included within the structure.
+
+New extension attributes SHOULD use a name that is
 descriptive enough to reduce the chances of name collisions with other
-extensions. In particular, extension authors SHOULD check the
-[documented extensions](documented-extensions.md) document for the
+extensions. In particular, extension authors might want to consider checking
+the [documented extensions](documented-extensions.md) document for the
 set of known extensions - not just for possible name conflicts but
 for extensions that might be of interest.
 
