@@ -138,6 +138,36 @@ attributes and the event data will be materialized. For example, in the case
 of a JSON serialization, the context attributes and the event data might
 both appear within the same JSON object.
 
+###  Context vs Data
+
+As described in the [Terminology](#terminology) section, there are two
+parts to CloudEvents: the "context attributes" and the "data" of the event
+itself. Choosing which pieces of metadata to include in each of these parts
+if very important. In general, the event data will contain all of the
+information about the event that occurred, while the CloudEvents
+context attributes will be used to convey additional metadata that might
+be used in ancillary actions related to the processing of the event.
+
+For example, the identity of the component that generated the event (the 
+`source`) might not be part of the event data but could be useful in
+determining which consuming component to route the request to, therefore
+it is included as a context attribute. Sometimes it might be necessary
+to do some analysis across multiple events, for example to correlate
+events. To help in this processing some event producers might include
+additional identification information as context attributes so that
+event consumers can easily access this information without needing to
+examine (or understand) the event data.
+
+It is important to note that when including metadata as context attributes
+(either using the attributes defined in this specification, or adding
+extension attributes), if that metadata also happens to be part of the
+event data then it is not necessary (or even suggested) that it be removed
+from the event data. While this might lead to duplication of information,
+usage of the CloudEvents specification is not supposed to modify
+the normal event that a producer would generate. CloudEvents metadata is
+meant to be strictly additive in nature for the purpose of increasing the
+interoperability of event delivery.
+
 ### Extension Attributes
 CloudEvent producers MAY include additional extension attributes within the
 event. This enables event producers, or middleware, to include additional
