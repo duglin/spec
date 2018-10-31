@@ -12,17 +12,17 @@ This document is a working draft.
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
-- 1.1. [Conformance](#11-conformance)
-- 1.2. [Relation to AMQP](#12-relation-to-amqp)
-- 1.3. [Content Modes](#13-content-modes)
-- 1.4. [Event Formats](#14-event-formats)
-- 1.5. [Security](#15-security)
+    1. [Conformance](#11-conformance)
+    2. [Relation to AMQP](#12-relation-to-amqp)
+    3. [Content Modes](#13-content-modes)
+    4. [Event Formats](#14-event-formats)
+    5. [Security](#15-security)
 2. [Use of CloudEvents Attributes](#2-use-of-cloudevents-attributes)
-- 2.1. [contentType Attribute](#21-contenttype-attribute)
-- 2.2. [data Attribute](#22-data-attribute)
+    1. [contentType Attribute](#21-contenttype-attribute)
+    2. [data Attribute](#22-data-attribute)
 3. [AMQP Message Mapping](#3-amqp-message-mapping)
-- 3.2. [Binary Content Mode](#31-binary-content-mode)
-- 3.1. [Structured Content Mode](#32-structured-content-mode)
+    2. [Binary Content Mode](#31-binary-content-mode)
+    1. [Structured Content Mode](#32-structured-content-mode)
 4. [References](#4-references)
 
 ## 1. Introduction
