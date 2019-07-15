@@ -210,6 +210,40 @@ general, this is true for all CloudEvents attributes as well.
 This section provides additional background and design points related to some of
 the CloudEvent attributes.
 
+In general, the goal of the CloudEvents specification is to enable the
+abstract processing (e.g. routing, filtering) of events in such a way that
+receiver does not need to know about the exact shape or contents of the
+business logic within the event (i.e. in the `data` attribute). In order to
+do this, the specification limits the allowable data types of the
+CloudEvents attributes, and extension attributes. This is done due to the
+lack of consistency between various serialization formats and network
+transports.
+
+Some serializations have a rich and strongly typed data model,
+while others limit themselves to just strings. Since any one CloudEvent might
+be transmitted over multiple transports and in varying serializartions,
+the decision was made to limit the allowable data types for attributes.
+
+As an example, Maps are not allowed to be used since serializing those into
+certain metadata formats (such as HTTP Headers) can be a challenge. If the map
+were to be serialized as a single entity (e.g. as a JSON object), then
+performing quick analysis (e.g. filtering) of that data becomes costly.
+If the map were to be serialized such that each key was its own metadata
+property then rules would need to defined to map each key - for example,
+`mapName-keyName`. And while this is possible, we would run into other
+potential issues such as property name lengths, or how to deal with
+potentially nested maps.
+
+The specification authors decided that (for now) they would avoid these
+issues and keep the data types limited. For Map, since their main purpose
+appears to be for grouping related attributes, the recommendation is to
+prefix related attributes with a common string. For example, the
+[Distributed Tracing](extensions/distributed-tracing.md) extension
+prefixes its attribute names with `trace`.
+
+If, in the future, there appears to be a strong need to extend the data
+types then new ones can be added.
+
 ### id
 
 The `id` attribute is meant to be a value that is unique across all events
