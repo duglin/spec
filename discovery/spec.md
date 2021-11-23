@@ -693,7 +693,7 @@ compliant Discovery Endpoint implementations that support being managed.
 #### Asynchronous Processing
 
 For any of the following API endpoints, if the Discovery Endpoint chooses
-to process the incoming request asynchronous then the following rules apply:
+to process the incoming request asynchronously then the following rules apply:
 - A `202 Accepted` MUST be returned to the request. This indicates that the
   request has been accepted but not processed yet.
 - The `202 Accepted` response MUST include a `Location` HTTP Header that
