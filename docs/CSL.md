@@ -275,9 +275,9 @@ materials under this License.
 
 
 
-*The text of this Community Specification License is Copyright 2020 Joint
+* The text of this Community Specification License is Copyright 2020 Joint
 Development Foundation and is licensed under the Creative Commons Attribution
 4.0 International License available at
-https://creativecommons.org/licenses/by/4.0/.*
+https://creativecommons.org/licenses/by/4.0/ .*
 
 SPDX-License-Identifier: CC-BY-4.0

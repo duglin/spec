@@ -27,4 +27,3 @@ documents above. If my employer(s) has rights to intellectual property that
 may be infringed by the materials developed by this Working Group, I represent
 that I have received permission to enter these agreements on behalf of that
 employer.
-
