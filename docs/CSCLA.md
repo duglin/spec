@@ -1,5 +1,8 @@
 # Community Specification Contributor License Agreement 1.0
 
+<ins>**Q: Is this a form someone needs to sign or is this just implicitly binds
+   everyone by them simply participating in the group?**</ins>
+
 By making a Contribution to this repository, I agree to the terms of the
 following documents:
 

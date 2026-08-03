@@ -32,7 +32,11 @@ for implementations of the Specification.
 
 **2.1.1.    As a Result of Contributions.**
 
-**2.1.1.1.  As a Result of Contributions to Draft Specifications.** 
+<ins>**Q: How are people "in" the working group? Do they need to sign something
+   or does participating automatically mean they agree to our legal docs
+   and that makes them a member?**</ins>
+
+**2.1.1.1.  As a Result of Contributions to Draft Specifications.**
 Contributor grants Licensee a non-sublicensable, perpetual, worldwide,
 non-exclusive, no-charge, royalty-free, irrevocable (except as expressly
 stated in this License) license to its Necessary Claims in 1) Contributor’s
@@ -54,6 +58,10 @@ royalty-free, irrevocable (except as expressly stated in this License) license
 to its Necessary Claims for its Implementation, except for those patent claims
 excluded under Section 3.
 
+<ins>**Q: I'd like to remove the "except..." part. If they have a problem with
+something in our spec/code/repo... they should open an issue/PR and ask us
+to remove the concerning stuff.**</ins>
+
 **2.1.3.    Licensee Acceptance.**  The patent grants set forth in Section 2.1
 extend only to Licensees that have indicated their agreement to this License
 as follows:
@@ -71,6 +79,11 @@ with the Implementation; or
 Specification’s repository’s Notices.md file by the Implementer’s authorized
 representative, including the Implementer’s name, authorized individual and
 system identifier, and Specification version.
+
+<ins>**Q: do we need 2.1.3.3?  I'd like to get rid of Notices.md. I'd prefer if we
+made it such that: participation in the group and offering IP implies they
+agree with our license and they have 30 days to complain about IP being added
+that might be of concern to them.**</ins>
 
 **2.1.4.    Defensive Termination.**  If any Licensee files or maintains a
 claim in a court asserting that a Necessary Claim is infringed by an
@@ -105,6 +118,9 @@ commitments and obligations with respect to the Working Group up to the date
 of that withdrawal notice will remain in effect, but no new obligations will
 be incurred.
 
+<ins>**Q: Can we reword 2.3 to just talk about how people can stop participating
+at any time by just not showing up/contributing?**</ins>
+
 **2.4.  Binding Encumbrance.**  This License is binding on any future owner,
 assignee, or party who has been given the right to enforce any Necessary
 Claims against third parties.
@@ -113,9 +129,9 @@ Claims against third parties.
 
 **3.1.  As a Result of Contributions.**  Contributor may exclude Necessary
 Claims from its licensing commitments incurred under Section 2.1.1 by issuing
-an Exclusion Notice within 45 days of the date of that Contribution. 
+an Exclusion Notice within 30 days of the date of that Contribution.
 Contributor may not issue an Exclusion Notice for any material that has been
-included in a Draft Deliverable for more than 45 days prior to the date of
+included in a Draft Deliverable for more than 30 days prior to the date of
 that Contribution.
 
 **3.2.  As a Result of a Draft Specification Becoming an Approved
@@ -242,6 +258,11 @@ Exclusion Notice for unpublished patent applications must provide either:
 part(s) of the Draft Specification whose implementation makes the excluded
 claim a Necessary Claim. If (ii) is chosen, the effect of the exclusion will
 be limited to the identified part(s) of the Draft Specification.
+
+<ins>**Q: Can we make this more like: if you have a concern about anything in our
+specs/code/repos... then open an issue/PR to ask us to remove it. Otherwise
+the assumption is that everything is ok. I'd like to get rid of Notices.md
+as it seems unnecessary.**</ins>
 
 **9.8.  Implementation.**  “Implementation” means making, using, selling,
 offering for sale, importing or distributing any implementation of the
